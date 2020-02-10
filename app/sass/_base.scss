@@ -1,0 +1,41 @@
+@import "./mixins";
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: #111212;
+  --color-light-grey: #C3CACB;
+  --color-grey: #313233;
+  --color-blue: #4562C9;
+  --color-white: #ffffff;
+
+  --font-primary: Gordita, sans-serif;
+  --font-secondary: 'PT Sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    max-width: 1080px;
+  }
+  @include respond(big-desktop) {
+    max-width: 1190px;
+  }
+}
+
+.Section__title {
+  font: 400 50px/65px var(--font-primary);
+  color: var(--color-primary);
+  margin-left: 55px;
+  @include respond(tab-land) {
+    margin: 0;
+  }
+  @include respond(phone) {
+    margin-left: 25px;
+    font-size: 30px;
+  }
+}
+
+

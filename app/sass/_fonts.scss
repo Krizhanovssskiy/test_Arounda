@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Gordita';
+  src: url('../font/Gordita-Regular.eot');
+  src: local('Gordita Regular'), local('Gordita-Regular'),
+  url('../font/Gordita-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../font/Gordita-Regular.woff2') format('woff2'),
+  url('../font/Gordita-Regular.woff') format('woff'),
+  url('../font/Gordita-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');

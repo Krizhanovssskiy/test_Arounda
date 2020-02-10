@@ -1,0 +1,61 @@
+@import "mixins";
+
+.KeyIdeasGrid {
+  padding: 130px 0;
+
+  &__listIdeas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    margin-top: 90px;
+    @include respond(tab-port) {
+      grid-template-columns: none;
+
+    }
+  }
+
+  &__listIdeas-item {
+    position: relative;
+    max-width: 672px;
+    width: 100%;
+    height: auto;
+    padding: 65px 55px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &:hover {
+      background: var(--color-blue);
+      color: var(--color-white);
+
+      .Ideas {
+        &__title, &__text, &__number {
+          color: var(--color-white);
+        }
+      }
+    }
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-areas:
+              "number"
+              "title"
+              "text";
+    }
+    @include respond(phone) {
+      padding: 40px 25px 60px;
+      .container{
+        padding: 0;
+      }
+    }
+  }
+
+  .Ideas__title{
+    grid-area: title;
+  }
+  .Ideas__text {
+    grid-area: text;
+  }
+  .Ideas__number {
+    grid-area: number;
+  }
+
+}

@@ -1,0 +1,56 @@
+@import "mixins";
+
+.KeyIdeasFlex {
+  padding: 130px 0;
+  &__listIdeas {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+
+    }
+  }
+
+  .Ideas__number {
+    @include respond(tab-port) {
+      position: absolute;
+      top: 40px;
+      left: 55px;
+    }
+    @include respond(phone) {
+      left: 25px;
+    }
+  }
+
+  &__listIdeas-item {
+    position: relative;
+    max-width: 672px;
+    width: 100%;
+    height: auto;
+    padding: 65px 55px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &:hover {
+      background: var(--color-blue);
+      color: var(--color-white);
+
+      .Ideas {
+        &__title, &__text, &__number {
+          color: var(--color-white);
+        }
+      }
+    }
+    @include respond(phone) {
+      padding: 40px 25px 60px;
+      .container{
+        padding: 0;
+      }
+    }
+  }
+
+
+}
